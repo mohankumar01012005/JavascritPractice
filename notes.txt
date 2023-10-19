@@ -1,2 +1,22 @@
 ## Why JavaScript? How Website Work
 -Brain of Website
+
+## VARIABLES
+  ==>Containers to store values 
+  ==>What you can
+     -->First letter must be a letter,underscore(_)
+     -->can use $
+     -->can use a letter, number, under score
+     -->no limit to length of variable name
+  ==>What you can't
+     -->can't use numbers at begining of variable name 
+     -->can't use js reserved words
+     -->can't use spaces
+  **=>variables are Case sensitive 
+## DATA TYPES
+  ==> 6 Primitive data types
+     -->Undefined = Undefined
+     -->Boolean   = true or false
+     -->Number    = 9
+     -->String    = "mohan"
+     -->Bigint    = 

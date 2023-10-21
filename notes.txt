@@ -97,4 +97,185 @@
              }
 
 
+
 ####FUNCTIONS IN JAVASCRIPT 
+         ==>A block of code designed to perform a particular task
+         ==>before we use a function we need to define it
+      ==>function functionName()
+             {
+               //statement
+             }
+      ==> Defining a function does not executes it to execute we need to call it 
+      ==> function is a group of re-usable code can be called anyware in code 
+   
+   ##Differense between function parameter and function argument
+      
+      ==> function total(a,b ){     // a, b are function parameters 
+            var c = a+b
+            console.log(c);
+            }                    
+            
+            
+            total();                  
+            total(50,40);            // 50,40 are function arguments
+            total(20,30);           //20,30 are function arguments
+
+      ==> by using function parameters and function arguments  we can re-use function code easily
+      ==> you can use same code many times with different arguments 
+
+   ## FUNCTION EXPRESSION
+      ==> creating a function and put it in a variable
+                     
+               function total(a,b ){     // a, b are function parameters 
+                  var c = a+b
+                   console.log(c);
+                   }                    
+ 
+ 
+               var funExpr = total(10,20); 
+               funExpr;     //FUNCTION EXPRESSION
+
+   ## RETURN KEYWORD
+      ==>when js reaches return statement the function will stop executing
+               function total(a,b ){     
+                  return c = a+b;        //using return key word
+                  }                    
+   
+   
+               var funExpr = total(1,20); 
+                console.log('The sum of two numbers is:'+ funExpr); 
+
+   
+   ##ANONYMOUS FUNCTION
+      ==> function without any name is called anonymous function
+
+
+             var funExpr = function (a,b ){     
+            return c = a+b;        
+             } 
+            console.log(funExpr(20 ,4));                   
+            console.log('The sum of two numbers is:'+ funExpr); 
+
+
+
+###LET AND CONST AND VARIABLES
+      ==> LET and CONST = block scope 
+      ==> VAR = function scope
+      ==> if we create any variable in a block(inside any {}) using let or const you cannot manupulate them (change their values ) out side the block.
+      ==> if you create any variable using let or const in global scope (parent block) you can manupulate in child block but viseversa is not possible
+      ==> var can be manupulated in any way
+
+
+###FAT ARROW FUNCTION
+      const sum = () => {
+         let a = 10; b=20; 
+         return `the sum of two numbers is  ${a+b}`;
+         }
+
+      console.log(sum());
+
+
+      ##SIMPLIFIED VERSION 
+
+      const sum = () => {
+         let a = 10; b=20; 
+       return `the sum of two numbers is  ${a+b}`;
+        }
+      console.log(sum());
+
+      ##SIMPLIFIED VERSION 
+
+      const sum = () => {
+         let a = 10; b=20; 
+  
+       return `the sum of two numbers is  ${(a=3)+(b=5)}`;
+         }
+      console.log(sum());
+
+
+      //##SIMPLEST VERSION
+
+         const sum = () => `the sum of two numbers is  ${(a=3)+(b=5)}`;
+         console.log(sum());
+
+
+
+####ARRAYS IN JAVASCRIPT
+      ==> if we want to store multiple values in a variable we use ARRAYS
+      ==> in js we have an array class and arrays are the prototypes of the class
+      ==> the values in arrays are located within square brackets[] 
+      ==> unlike other programming languages arrays can store multiple data types in same array
+         -->let king=['lion', 'cheeta', 'panda', 'lepord', 3,4, true]
+         --> here first element (lion) is called lower index/ lower  boundary
+         --> and last element (true) is called upper / upper boundary
+         --> index number is used to manupulate indevidual  elements in an array  
+         -->  index number of first number is 0 (zero) and goes on by adding 1 to consecutive elements
+
+   ## TRAVERSAL IN AN  ARRAY
+      -> Navigates through an array if you want to get a single data in an array and change that change that value
+
+         let king=['lion', 'cheeta', 'panda', 'lepord']
+         console.log(king[2]);
+
+   //## LENGTH OF ARRAY       
+
+         let king=['lion', 'cheeta', 'panda', 'lepord']
+         console.log(king.length);        //USED to find the last value of an array
+
+### FOR LOOP
+
+         let king=['lion', 'cheeta', 'panda', 'lepord']
+         for (var i=0; i<king.length;i++){
+            console.log(king[i]);
+         }
+
+   ##FOR IN LOOP 
+      ==> for in loop will give the index number of  a given array
+
+      let king=['lion', 'cheeta', 'panda', 'lepord']
+      for (Elements in king){
+         console.log(Elements);
+      }
+
+   ##FOR OF LOOP
+      ==> Works like for loop but syntex is different
+
+          let king=['lion', 'cheeta', 'panda', 'lepord']
+         for (Elements of king ){
+             console.log(Elements);
+            }
+         
+   ##FOR EACH LOOP
+      ==> calls a function for each element in the array 
+      ==> in for in and for of loops we can can get either index number or element but in FOR EACH loop we can get all the    details like index number, element and also array name 
+      ==> in for each loop you cant use break statement
+       
+       let king=['lion', 'cheeta', 'panda', 'lepord']
+       king.forEach(function(Element,index,array){
+         console.log(Element);
+       });
+
+### SEARCHING AND FILTER IN ARRAY
+
+   ===> Index of method 
+         ->indexOf method is used to find a particular elements index value 
+         -> returns the first(least) index of an element within the array equal to an element
+         -> returns -1 if none is found
+         -> strarts the searching from 0th index number.
+         -> its a case sensitive
+
+             let king=['lion', 'cheeta', 'panda', 'lepord']
+               console.log(king.indexOf("cheeta"));
+                              (and/or)
+             let king=['panda', 'cheeta', 'lion', 'lepord','lion']
+                console.log(king.indexOf("lion",3));     //("lion",3)--> lion is the element we are searching for and three denotes we are searching in right direction
+
+   ===>## LAST INDEX OF METHOD
+
+         > returns the last(Greatest) index of an element within the array equal to an element
+         -> returns -1 if none is found
+         -> strarts the searching for elements from last to first
+         -> its a case sensitive
+
+
+       

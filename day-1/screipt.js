@@ -18,10 +18,11 @@
 // console.log(5+20);
 // ##POSTFIX INCREAMENT
 
-// num = 15
-// newNum = num++
-// console.log(num);
-// console.log(newNum);
+// var num = 15
+//  var newNum = num++
+//  console.log(newNum);
+//  console.log(num);
+
 
 //  ## INCREAMENT
       //## PREFIX

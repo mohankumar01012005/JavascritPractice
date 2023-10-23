@@ -358,6 +358,48 @@
 
 #### perform CRUD (create, read, update, and delete )
 
-   ## prototype.push()
+   ##array.prototype.push()
 
       ==> the push() method  adds one or more elements to the end of an array and returns the new lenth of the array
+
+             var frds=['pen', 'book', 'pencil', 'mouse']
+             const count= frds.push('keyboard','laptop','bag');  //const count is for returning new length of the array
+               console.log(frds);
+               console.log(count);
+    
+   
+   ##array.prototype.unshift()
+
+      ==> the unshift() method  adds one or more elements to the start/begining of an array and returns the new lenth of the array
+
+            var frds=['pen', 'book', 'pencil', 'mouse']
+            const count= frds.unshift('keyboard','laptop','bag');  //const count is for returning new length of the array
+            console.log(frds);
+            console.log(count);
+
+   
+   ##array.prototype.pop()
+
+      ==> the pop() method removes the last elemenet from the array and returns that elemenet
+      ==> this method ahanges length of the array
+
+           var frds=['pen', 'book', 'pencil', 'mouse']
+            console.log(frds);
+            console.log(frds.pop());
+            console.log(frds);
+
+      
+   ##array.prototype.shift()
+     
+     ==> the shift() method removes the first elemenet from the array and returns that removed elemenet
+     ==> this method ahsnges the length of the array
+
+         var frds=['pen', 'book', 'pencil', 'mouse']
+          console.log(frds);
+          console.log(frds.shift());
+          console.log(frds);
+
+
+#### SPLICE() METHOD   
+
+     ==> splice() function removes or adds elements in a  array

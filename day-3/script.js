@@ -181,7 +181,7 @@
       //  console.log(king.indexOf("lion",3));     //("lion",3)--> lion is the element we are searching for and three denotes we are searching in right direction
 
 
-      //## LAST INDEX OF METHOD
+      
 
 
 

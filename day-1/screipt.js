@@ -24,16 +24,16 @@
 // console.log(newNum);
 
 //  ## INCREAMENT
-
-// num = 15
-// newNum = ++num
+      //## PREFIX
+// var num = 15
+//  var newNum = ++num
 // console.log(num);
 // console.log(newNum);
 
 
 // ##POSTFIX DECREAMENT
-// num = 15
-// newNum = num--
+// var num =15
+// var newNum =--num
 // console.log(num);
 // console.log(newNum);
 

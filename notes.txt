@@ -34,7 +34,7 @@
                         Prefix(++X):the prefix oparator increaments and returns the value before increamenting
                         Decreament oparator== X--(postfix), --X(prefix)
                         Postfix(X--):The postfix oparator decreaments and returns the value after decreamenting
-                        Prefix(++X):the prefix oparator decreaments and returns the value before decreamenting
+                        Prefix(--X):the prefix oparator decreaments and returns the value before decreamenting
       3.comparision ==> (<,>,=,!=,>=,<=) this oparator compars the operands and returns a logical value based on the comparision is true 
       4.logical     ==> (and , or, not)logical operators are used with Boolean value and returns Boolean valueas
                         and(&&)= true if and only if all the operands are true otherwise its false
@@ -263,6 +263,8 @@
          -> returns -1 if none is found
          -> strarts the searching from 0th index number.
          -> its a case sensitive
+         -> if the array is too big and you want to find the index value of similar elements there this indexOf method is used 
+            to find the index value of same elements towards right side.
 
              let king=['lion', 'cheeta', 'panda', 'lepord']
                console.log(king.indexOf("cheeta"));
@@ -270,12 +272,92 @@
              let king=['panda', 'cheeta', 'lion', 'lepord','lion']
                 console.log(king.indexOf("lion",3));     //("lion",3)--> lion is the element we are searching for and three denotes we are searching in right direction
 
-   ===>## LAST INDEX OF METHOD
+      ===>## LAST INDEX OF METHOD
 
          > returns the last(Greatest) index of an element within the array equal to an element
          -> returns -1 if none is found
          -> strarts the searching for elements from last to first
+         -> its a case sensitive 
+         -> this also gives the value of index of particular elements and if there are multiple elements it will give you the greatest index value
+         -> if the array is too big and you want to find the index value of similar elements there this lastIndexOf method is used 
+            to find the index value of same elements towards left side.
+
+               
+            
+               let king=['panda', 'cheeta', 'lion', 'lepord','lion']
+                  console.log(king.lastIndexOf("lion",3));  
+
+
+       ### INCLUDES()
+
+         -> determines wether the array contains the value , na d returns true or false appropriately
          -> its a case sensitive
-
-
+         -> it will find elements through forward search 
+              
+               let king=['panda', 'cheeta', 'lion', 'lepord','lion']
+                  console.log(king.includes("lion"));   
        
+
+                    let king=['panda', 'cheeta', 'lion', 'lepord','lion']
+                      console.log(king.includes("panda",2));                // false becauese its starting search from index 2    
+
+
+       ###  FIND ()         
+
+         -> returns the found element in the array, if some element in the array satisfies the testing Condition.
+         -> returns Undefined if not found and only problem is that it returns only one elemenet
+
+               
+               var prices = [200,300,350,380,400,450,600];
+               //aim is to find all the price<400
+                  const findElem = prices.find((currval)=>{
+                  return currval<400;
+                });
+               console.log(findElem);          //will give you only one value that satisfies the return condition first
+
+                   
+                   //##SIMLPIFIED WAY
+                   
+               var prices = [200,300,350,380,400,450,600];
+                   console.log(prices.find((currval)=> currval<400) );
+
+
+      ## FIND INDEX ()
+
+         -> almost same as find() method but here it is returns the index value and returns -1 if elemenet is not found
+         -> returns -1 if not found 
+           var prices = [200,300,350,380,400,450,600];
+            console.log(prices.findIndex((currval)=> currval<400) );
+
+
+   ### FILTER METHOD()
+
+      -> returns new array containing all elements of the calling array for which the provided filtering function returns true
+      -> returns empty array[] if not found
+        var prices = [200,300,350,380,400,450,600];
+             //condition prices<400
+         const newPrice=prices.filter((Element, index)=>{
+            return Element<400;
+          })
+            console.log(newPrice);
+
+   #### HOW TO SORT() AN ARRAY METHOD 
+      ## array.sort() method 
+
+      -> this method sorts the elements of array and  returns the sorted array , the default sort order is asscending , 
+          built upon converting them into strings
+      -> in this method numbers are converted in to strings so, 25>100 because 2>1.
+
+      
+         var months = ["jan", "feb", "march", "april", "july", "dec"]
+            console.log(months.sort());
+
+         var num = [2, 3, 10, 1000, 49, 58, 300];
+            console.log(num.sort());
+
+
+#### perform CRUD (create, read, update, and delete )
+
+   ## prototype.push()
+
+      ==> the push() method  adds one or more elements to the end of an array and returns the new lenth of the array

@@ -403,3 +403,174 @@
 #### SPLICE() METHOD   
 
      ==> splice() function removes or adds elements in a  array
+
+   // GENERAL FORMATE == const newMonth = months.splice((index that you want to insert the new elemenet), (index of the elemenet that you want to remove), ("the element that you want to insert in the array"))
+
+   const months=['Jan', 'march', 'April', 'June', 'July'];
+   const newMonth = months.splice(months.length,0,'Dec');   // months.length ==> means after the last most element of the array
+      console.log(months);
+
+
+// the return value of splice method 
+
+   console.log(newMonth);   // splice method is mostly used for deleting the eelments in  return value it will give the deleted values
+
+//## UPDATING
+
+   const months=['Jan', 'march', 'April', 'June', 'July'];
+   const newMonth = months.splice(1,1,'March')
+   console.log(months);
+
+//### ORIGINAL METHOD FOR UPDATING AN ARRAY 
+
+   const months=['Jan', 'march', 'April', 'June', 'July'];
+   const indexOfMonth = months.indexOf('march');   /// finding index of elements in array using filter (indexof) method
+   if (indexOfMonth!=-1){
+      const updateMonths = months.splice(indexOfMonth,1,'March')
+      console.log(months);
+   }else{
+      console.log('no data found');
+   }
+
+
+//## deleting an unknown index number element from array
+
+
+   const months=['Jan', 'march', 'April', 'June', 'July'];
+   const indexOfMonth = months.indexOf('June');   /// finding index of elements in array using filter (indexof) method
+   if (indexOfMonth!=-1){
+      const updateMonths = months.splice(indexOfMonth,1)    /// same as updating but removed the element adding part and if you 
+                                                               use Infinity instead of 1 it will delete all elements after June
+      console.log(months);
+      console.log(updateMonths);            // returns the deleted elements from the array
+   }else{
+      console.log('no data found');
+   }
+
+
+
+///#### MAP AND REDUCE METHOD
+
+   ##array.prototype.map()
+
+      ==> returns a new array containing the results of calling a function on every element in the array
+      ==> It returns new array without mutating the original array
+      ==> almost same like for each method but in for each it will mutate the original array
+
+     SYNTEX ==> let newArr = arr.map(callback(currentvalue[, index[, array]]){
+                     // return elemenet for newArray after executing something
+                   }[, thisArg]);
+
+      EXAMPLE:
+            const array1 = [1,3,4,5,6,];
+             let newArr = array1.map((currElement,index,arr)=>{
+               return `index no = ${index} and the element value is ${currElement} of the array ${arr}`
+             })
+              console.log(array1);
+               console.log(newArr);
+
+
+   // ### DIFFERENECE BETWEEN FOR EACH METHOD AND MAP METHOD 
+         
+         1. Returnig
+            ==> both do the same job but first Differense is the returning value the for each method returns Undefined while  
+                the map method returns new array with transformed elements
+         
+         2. Ability to chain other methods 
+            ==> map is chainable means you can attach reduce(), sort(), filter(), and so on after perforing a map method over an
+                array and you cant do all this in for each method becauese it returns undefined
+
+
+   //## CHALLENGE - 11
+
+      //## finding sqare root of every element in array
+         
+         // let arr = [ 25, 36, 49, 64, 81];
+         // let arrSqr = arr.map((currElement)=>{
+         //   return Math.sqrt(currElement)
+         // })
+         // console.log(arrSqr);
+
+      //## multiply each element with 2 and return the elemrnts which are greater than 10
+
+         let arr = [5,6,7,8,9];
+         let arr2 = arr.map((currElement)=>{
+            return currElement*2;
+         }).filter((customElements)=>{         //using chaining (a method inside a method(filter))
+            return customElements>10;
+         })
+         console.log(arr2);
+
+   
+   //### REDUCE METHOD
+
+      ==> flatten an array means to convert 3rd or 2nd aray in to a single dimentional array
+      ==> the reduce() method executes a reducer function (that we provide ) on each elelment of the array , resulting in 
+          single output value
+      ==> reduce function takes four arguments : 1. Accumulator
+                                                 2. current value 
+                                                 3. current index
+                                                 4. source array
+      ==> Mainly we use reduce function to find total sum, average, product, percentage (single values)
+
+      //## finding sum
+
+         let arr = [2,4,6]
+         let sum = arr.reduce((accumulator,currElement,index,arr)=>{
+            return accumulator += currElement
+         },7)                                   // we can include or initialise a value to the array like this in reduce function
+         console.log(sum);
+       
+      //## finding product
+
+         let arr = [2,4,6]
+         let sum = arr.reduce((accumulator,currElement,index,arr)=>{
+            return accumulator *= currElement
+         })
+         console.log(sum);
+
+
+   //### USING MAP, FILTER AND REDUCE FUNCTIONS SAME TIME ***************** IMPORTANT ***************
+
+         let arr =  [2, 4, 5, 3, 9, 8 ]
+         let arr2 = arr.map((customElements)=>customElements*2).filter((currElement)=>currElement>4).reduce((accumulator,currElement)=>{
+         return accumulator += currElement
+         })
+         console.log(arr2);
+
+
+   //## How to flatten an array
+
+      ==> converting 2d and 3d array into a one dimentional array
+
+       let arr = [
+         ['zone1','zone2'],
+         ['zone3','zone4'],
+         ['zone5','zone6'],
+         ['zone7','zone8']
+      ]
+      let fltArr = arr.reduce((accumulator,currentElements)=>{
+         return accumulator.concat(currentElements);
+      })
+            console.log(fltArr);
+
+
+//##### STRINGS IN JAVASCRIPT
+
+      ==> Java script strings is zero or more characters written inside quotes.
+      ==> Java script strings is used for storing and manupulating text you can use single or double quotes 
+      ==> strings can be created as Primitive from string literals, or as objects, using the string constructor
+
+   ## length of the string 
+
+       let myname = "mohan kumar"
+         console.log(myname.length);
+
+   ## Escape charecter
+      
+      let myname = "mohan kumjcvhfeiuvhwofhwdfoimf\"hcbuhwgfuwegfdwe\"ar"   // use alternate quotes  or back slash \ \
+         console.log(myname);
+
+   ##Finding a string inside a string
+
+      

@@ -404,11 +404,15 @@
 
      ==> splice() function removes or adds elements in a  array
 
-   // GENERAL FORMATE == const newMonth = months.splice((index that you want to insert the new elemenet), (index of the elemenet that you want to remove), ("the element that you want to insert in the array"))
+   // GENERAL FORMATE == const newMonth = months.splice((index that you want to insert/delete the new elemenet), (no. of elements we want to delete after deleting index ), ("the element that you want to insert in the array"))
 
    const months=['Jan', 'march', 'April', 'June', 'July'];
    const newMonth = months.splice(months.length,0,'Dec');   // months.length ==> means after the last most element of the array
       console.log(months);
+
+//deleting-> month.splice(2,3)==> it will delete 3 elements after 2nd index element  
+//adding-> month.splice(2,3,"book")==> it will  add book in the array at 2nd index and deletes the three elements after that 
+
 
 
 // the return value of splice method 
@@ -572,5 +576,151 @@
          console.log(myname);
 
    ##Finding a string inside a string
+        
+        ##indexof()
+            let myData = 'I am Mohan kumar here'
+               console.log(myData.indexOf('here',9));
+            
+               // NOTE :1--> Space also counted and space has index
+                        2--> here 9 means the function searches for the same elelment after index 9
+                        3--> it returns -1 if not found and it is case sensitive
 
+        ##lastIndexOf()
+               //NOTE : 1--> it returns -1 if not found and it is case sensitive
+                        2--> unlike in indexof() searching towards right it searches towards left from the 
+                             index number given 
+
+            let myData = 'I am Mohan kumar here'
+               console.log(myData.lastIndexOf('a',5));
+
+
+   ## Searching for a string in a string
+
+         ## search()
+
+            --> the search() method searches a string for a specified value and returns the position of the 
+                match
+
+            --> it returns -1 if not found and it is case sensitive
+            --> the search method cannot take second strat position argument              
+            
+               const searchVar = 'the lion king'
+               let edited = searchVar.search("lion")
+                  console.log(edited);    
+
+
+   ##Extracting string parts  {there are 3 methods or ways }
+
+      ## 1.SLICE() method
+
+         => slice() method extracts a part of string and returns that psrt in new string.
+         => this method takes two parameters: strat position and the end position (end position is not included)
+         => negative argument means the counting is starting from last
+
+               var string = "apple, banana, orange, gua, kiwi";
+               var result = string.slice(0,4)      // end argument (4) is not included
+               console.log(result);
+
+      ## 2.substring() method
+
+         => substring method is similar to slice() Differense is it wont take negative index values if you give negative values it 
+            will strart counting from 0
       
+      ## 3.substr() method 
+         
+         => similar to slice() method the Differense is that the second parameter specifies the length of the extracted part.
+         => it is more helpful in such cases where you want to extract words in string from the last simply use single negative values
+
+               
+            var fruits = "apple, banana, orange, gua, kiwi";
+            var updated = fruits.substr(-10)
+      
+
+      ## Replacing String content
+
+         ##replace()
+
+            => replaces a specific value wiyh another value in string
+            => the replace method does not change the string that is called on, it returns a new string
+            => by default the replace method replaces the first match
+            => replace method is case sensitive
+
+               var bioData = 'i am mohan kumar'
+               var replecaData = bioData.replace('mohan','king')
+                  console.log(replecaData);
+
+   
+   ### Extracting string characters {there are 3 methods for  Extracting string character }
+
+      ## The charAt() Method 
+
+         =>returns the character at a specified index (position) in a string
+
+                var myData = "mohankumar the kalvian"
+                   console.log(myData.charAt(5));
+
+         
+       ## The charCodeAt() Method 
+
+         => the charCodeAt method returns the unicode of the character at a specified index at a string. The method returns a UTF-16
+            code(an integer between 0 and 65535)
+         => The unicode standard provides a unique number for every charecter, no matter the platform, device, application, or languages
+            UTF-8 is a popular unicode encoding which has 88-bit code units.
+
+               var myData = "mohankumar the kalvian"
+                console.log(myData.charCodeAt(0))
+
+      ## property access
+         
+         => allows property acccss []
+
+             let str = "HELLO WORLD"
+               console.log( str[2]);
+
+### to upper case and to lower case  method 
+      
+        let names = "Mohan The King"
+      console.log(names.toLocaleLowerCase());
+      console.log(names.toLocaleUpperCase());
+
+### Concat() method 
+
+      => concat() joins two or more strings
+
+         var firstName = "mohan"
+         var lastName = "kumar"
+         console.log(firstName.concat(lastName));
+         console.log(firstName.concat(" ",lastName));
+         console.log(firstName+ " "+lastName);
+         console.log(`${firstName} ${lastName}`);
+
+## string.trim() method
+
+   => the trim method removes white space from both sides of string
+   => this function removes emty space at the starting of string
+
+         var names = "         mohan "
+         console.log(names.trim());
+
+
+## Converting a string to an array
+
+   ## Spli() method 
+
+       var txt = "a,d,e,h,v,f,"          //string
+       console.log(txt.split(","));      //split on comas
+      console.log(txt.split(""));       // split on spaces
+      console.log(txt.split("|"));      // spli on pipe
+
+
+### Date and Time Methods
+
+      ==> javascript date objects represent a single moment in time in a platform-independent formate. Date objects contain a number that represents
+          milliseconds since 1 january 1970 UTC.
+
+   ## Creating date objects 
+      ## there are 4 ways to crate a date object:
+
+
+   
+ 

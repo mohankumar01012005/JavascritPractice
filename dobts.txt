@@ -1,3 +1,5 @@
 1  ==> line 23 day-6 js 
 
 2  ==> return
+
+3. time and date

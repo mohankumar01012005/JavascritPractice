@@ -858,4 +858,51 @@
 
         -> returns a random number between 0(inclusive)
 
+            console.log(Math.random()*10);              // this will give you random numbers with decimal values
+            console.log(Math.floor(Math.random()*10));  // this will give you random numbers (dont gives you 10 because of floor)
 
+      10.Math.trunc()
+
+        -> Math.trunc() method returns integer part of a number
+
+            console.log(Math.trunc(44.3));
+            console.log(Math.trunc(44.9));        // it will return you the value before decimal point
+
+
+/////// NOTE  \\\\\\\
+
+         ==>  if argument is positive number , Math.trunk() method is equalant to Math.floor(), otherwise 
+               Math.trunc() is equalant to Math.ceil() method
+
+
+##### DOM in javascript
+
+
+      ### WINDOW VS DOCUMENT in javascript
+
+          WINDOW:  1. window is the main container or we can say the 'global object' and any operations related to entire browser window
+                      can be a part of window object.
+                   2. All the members like objects, methods or properties. if they are part of window object then we dont want to 
+                      refer window object.
+                   3. window has method, properties and objects. Ex: setTimout() and setInterval() are the methods, where as document is the 
+                      object of window and it also has a scree object with properties describing the physical display.
+         
+         DOCUMENT: 1. DOM is a child of window object.
+                   2. in DOM we need to refer the document if we want to use the document, object, method or properties.
+                   3. where as document is the object of global object that is  window, which deals with the document, the HTML 
+                      elements themselves
+
+         ==> window is a main container(parent) and  document is a child of window 
+
+
+      #### DOM vs BOM
+
+         DOM: DOM is the document model object, which deals with the document, HTML elements themselves, eg: document nad all traversal 
+              you would do in it, events, etc..
+            
+            ==> for ex: change the background colour to red.
+               document.body.style.background = "red";            // changes the background colour of body in to red
+
+         BOM: the BOM is the browser object model, which deals with the browser componenets asaid from the document like history,
+              location, navigator and screen(as well as some others that vary by browser ). or 
+               in simple meaning all the window operations which comes under BOM are performed using BOM.

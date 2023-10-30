@@ -1059,6 +1059,64 @@
             ==> for ex: change the background colour to red.
                document.body.style.background = "red";            // changes the background colour of body in to red
 
-         BOM: the BOM is the browser object model, which deals with the browser componenets asaid from the document like history,
+         BOM: the BOM (browser object model) is the browser object model, which deals with the browser componenets asaid from the document like history,
               location, navigator and screen(as well as some others that vary by browser ). or 
                in simple meaning all the window operations which comes under BOM are performed using BOM.
+
+              => BOM can be used to  performs navigation, screen, location, frames, history, HTML httpREquest related  Works
+      
+      for example: document.getElementById()   
+
+               -> window has methods, properties, and object.
+                  ex: setTimout() or setInterval() are methods where as document is the object of window and it also has a screen 
+                      object with properties discribing the physical display
+
+               -> example of window object properties are innerHeight, innerWidth and many more
+
+     ## FUNCTIONS alert/confirm/prompt are also part of BOM:
+         they are directly not related to document, but represents pure browser methods of comunicating with user.
+         alert(location.href);     // shows current url
+         if (confirm("want to visit ThapaTechnical?")){
+            location.href="https://youtu.be/KGkiIBTq0y0?si=smJyhbr7rMXHMTtE( link that need to be visited)"   // redirect the browser to another url
+         }
+
+   ### DOM Navigation
+      
+      1. document.documentElement   //returns the elelment that is the root elelment of the document.(all the items inside html tag)
+      2. document.head
+      3. document.body
+      4. document.body.childNodes(includes tab, enter, and white space)
+         //(list of the direct children only)
+      5. document.children (without text nodes, only regular elements)
+      6. document.childNodes.length
+
+// document.body.hasChilNodes()   ///(will return true or false based on if children present or not)
+
+   ## How to find child in a DOM
+      1. document.body.firstElementChild           // will return all the childs
+       =>const firstChild = document.body.firstElementChild.firstElementChild        //returns only the first child (we have saved the first child in a variable)
+       =>firstChild.style.colour="red"       //we have changed the color of child 
+       =>document.querySelector('.child-two')      // selecting an element with class name (here we have selected second child)
+      
+      2. document.body.parentNode         //( returns the parent elements )
+        =>document.body.parentElelment
+        =>document.head.parentNode
+
+      3. document.body.nextSibling        // will return the sibling after body
+        => document.body.nextElementSibling        // will return the sibling after body excluding white space, tab, etc
+        => document.body.previousSibling     // will return the sibling before body   (it counts space, tabe etc also)
+        => document.body.previousElementSibling     // will return the sibling before body   (it dont counts space, tabe etc also)
+
+   **## document.getElementByClassName('class name')        //returns about the element with same class
+      => document.getElementByTagName('P')      // returns about the element inside p tag (used whenever the elemenet dont have any id or class)
+
+
+#### document.querySelector()
+
+      => using querySelector you can acccss both id and class.
+         -> for id document.querySelector('#idname')
+         -> for class document.querySelector('.classname')
+      => querySelector() returns the first matching value whereas querySelectorAll() will return all the elements 
+   
+   ## Differense between querySelector() and getElementById()
+      

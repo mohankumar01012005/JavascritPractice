@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p id="myP" onmouseenter="mouseDown" onmouseleave="mouseUp">
+  click the text ! the mouseDown () function is triggered when the mouse button is pressed down over this paragraph, and sets the colour of the para to red. the mouseUp() function is triggered when the mouse button is released , and sets the color of the text to green</p>
+
+</body>
+<script>
+
+  var para = document.getElementById("myP")
+
+  para.addEventListener("mouseenter",mouseDown)
+  para.addEventListener("mouseleave",mouseUp)
+
+  function mouseDown(){
+    document.getElementById("myP").style.color="white"
+    console.log('mouse entered');
+  }
+  function mouseUp(){
+    document.getElementById("myP").style.color="blue"
+    console.log('mouse left');
+  }
+
+  const mEnter = document.getElementById('myP')
+  mEnter.addEventListener('mouseenter',()=>{
+    mEnter.style.backgroundColor="blue"
+  })
+    
+  mEnter.addEventListener('mouseleave',()=>{
+    mEnter.style.backgroundColor="red"
+  })
+    </script>
+</html>

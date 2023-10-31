@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="main-div">
+  <div>
+    <label for="Your Name "></label>
+    <input type="text" name="" id="ice">
+    <br>
+    <label>
+      Choose an Ice creame flavour😍
+      <select name="" id="iceCreams" onchange="selectElement()">
+      <option value="">select one ...</option>
+      <option value="chocolate">chocolate </option>
+      <option value="Sardine">Sardine </option>
+      <option value="vanilla">vanilla </option>
+      
+    </select>
+    </label>
+    <br>
+    <div id="resilt"></div>
+  </div>
+</div>
+<script>
+// const selectElement=()=>{
+//   const inputChange = document.getElementById('ice').value
+//   const iceCreams = document.getElementById('iceCreams').value
+//   const result = document.getElementById('resilt')
+//   result.innerHTML=`${inputChange} selected  ${iceCreams} icecreame flavour`
+
+// }
+
+            // METHOD-2
+const iceCreams = document.getElementById('iceCreams');
+iceCreams.addEventListener('change',()  =>{
+  const inputChange = document.getElementById('ice').value
+  const iceCreams = document.getElementById('iceCreams').value
+  const result = document.getElementById('resilt')
+  result.innerHTML=`${inputChange} selected  ${iceCreams} icecreame flavour`
+});
+</script>
+</body>
+</html>

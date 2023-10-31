@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="content">
+      <h1>Different event types in javascript</h1>
+      <div class="button_container">
+        <div class="button_su">
+          <span class="su_button_circle"> </span>
+          <a
+            href="#"
+            class="button_su_inner"
+            onclick="alert('I am awesome, but no one uses me')"
+          >
+            <span class="button_text_container"> simple inline alert() </span>
+          </a>
+        </div>
+        <div class="button_su">
+          <span class="su_button_circle"> </span>
+          <a href="#" class="button_su_inner" onclick="callingFunction()">
+            <span class="button_text_container"> by calling a function </span>
+          </a>
+        </div>
+        <div class="button_su">
+          <span class="su_button_circle"> </span>
+          <a href="#" class="button_su_inner">
+            <span class="button_text_container" id="thirdWay">
+              inline event
+            </span>
+          </a>
+        </div>
+        <div class="button_su">
+          <span class="su_button_circle"> </span>
+          <a href="#" class="button_su_inner" id="fourtWay">
+            <span class="button_text_container"> Event listeners </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    // 2nd way of writting a function
+    const callingFunction = () => {
+      alert("most common way of writting functions");
+    };
+    // 3rd way of writing a function
+    const thirdWay=document.getElementById('thirdWay')
+    thirdWay.onclick=function(){
+      alert('3rd way of writing a function')
+    }
+    thirdWay.onclick=function(){
+      console.log('3rd way of writing a function')
+    }
+
+    // => in this way you are getting console log's result only because in this way you will only get the function mentioned at the bottom(here in this case it is console) note here the const values are same
+    
+    // 4rth way of writting a function
+    const fourtWay=document.querySelector('#fourtWay');
+    fourtWay.addEventListener('click',()=>{
+      alert('4rth way of writting a function')
+    })
+    fourtWay.addEventListener('click',()=>{
+      console.log('4rth way of writting a function')
+    })
+
+    //=> here in this model you will get the result of both the functions simultaniously (this method is used to perform multiple actions simultaniously) note here the const values are same
+
+  </script>
+</html>

@@ -14,12 +14,15 @@
 
    // ==>  if argument is positive number , Math.trunk() method is equalant to Math.floor(), otherwise 
   // Math.trunc() is equalant to Math.ceil() method
+// -7...-6.7     -6
+// 7...6.7     6
+        console.log(Math.trunc(-6.7));
+        console.log(Math.trunc(6.7));
+        console.log('');
+        
 
-        // console.log(Math.trunc(-6.7));
-        // console.log(Math.trunc(6.7));
-
-        // console.log(Math.trunc(-6.2));
-        // console.log(Math.trunc(6.2));
+        console.log(Math.trunc(-6.2));
+        console.log(Math.trunc(6.2));
 //# CHALLENGE - 10
 
   // DISPLAY ONLY 280 OF A STRING JUST LIKE TWITTER

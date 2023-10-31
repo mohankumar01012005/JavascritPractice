@@ -1117,6 +1117,69 @@
          -> for id document.querySelector('#idname')
          -> for class document.querySelector('.classname')
       => querySelector() returns the first matching value whereas querySelectorAll() will return all the elements 
-   
-   ## Differense between querySelector() and getElementById()
+
+                  /////////////DAY-12/////////
+   ## Differense between querySelector() and getElementById( )
       
+   1. document.getElementById()
+      => returns a reference to the element by its ID.
+      => if the elemenet with the specific ID is not found in document, it will return null
+   
+   2. document.querySelector()
+      => returns the first elelment within the document that matches the specified group of selectors, or null if no matches are found
+
+   NOTE: through getElementById you can only acccess  elements with ID but through querySelector you can acccess both elements with ID or CLASS
+
+#### EVENTS IN JAVASCRIPT
+   
+   => HTML events are "things" that happen to html elements.
+   => when javascript is used in HTML pages, javascript can "react" on these events.
+   => An html event can be something that browser does, or a user does.
+
+  ## 4 Ways of writting Events in javascript
+
+      1. Using inline events alert();
+      2. By calling a function
+      3. Using inline events (onclick="")
+      4. Using Event Listeners
+
+      //// go to 4WaysOfEvents.html page on day-12 for explanation/////
+
+### Section 2: Event Object
+
+      => Event object is the parent object of event object for ex: MouseEvent, KeyboardEvent, FocusEvent etc,. 
+      => we use event object to find out what are the events we are doing in that site or code
+
+      //// go to eventObject.html page on day-12 for explanation/////
+
+
+### Section 3: Mouse events in javascript
+
+       => event that occur when the mouse interacts with the HTML document belongs to the mouse event object.
+
+      //// go to mouseEvents.html page on day-12 for explanation/////
+
+### Section 4: KeyboardEvent in JavaScript
+
+      => events that occur when the user presses a key on the keyboard, belongs to the KeyboarEvent  Object.
+
+      //// go to keyboardEvent.html page on day-12 for explanation/////
+
+### Section 5: input events in JavaScript
+
+      => the onchange event occurs when the value of element has been changed.
+      => for radio buttons and check boxes the onchange event occurs when the checked state has been changed  
+    
+      //// go to keyboardEvent.html page on day-12 for explanation/////
+
+## NOTE ///    Differense between onclick and addEventListener
+
+      => addEventListener  does not overwrite existing event handlers, whereas onclick overrides any existing onclick = fn event handlers. 
+     
+
+##### TIMING BASED EVENTS IN JAVASCRIPT
+
+   1. setTimout(function, milliseconds)         // executes a function after waiting a specified number of milliseconds 
+   2. setInterval( function, milliseconds)      // same as setTimout() but repeats the execution of the function continuously.
+   3. clearTimout()
+   4. cleaInterval()

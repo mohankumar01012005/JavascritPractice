@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="main-div">
+    <div>
+      <p>want to know my name ?</p>
+      <p id="showMyName"></p>
+      <br>
+      <button id="btn"> click here </button>
+    </div>
+  </div>
+  <script>
+    const MyName= document.getElementById('showMyName')
+    const btn= document.getElementById('btn')
+
+    const showMyName = ()=>{
+      MyName.innerHTML = "loading...😜"
+
+      setTimeout(()=>{
+        MyName.innerHTML = "mohan"
+      },1000)
+    }
+
+    btn.addEventListener('click',showMyName )
+
+    
+  </script>
+</body>
+</html>

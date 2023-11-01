@@ -1070,7 +1070,7 @@
                -> window has methods, properties, and object.
                   ex: setTimout() or setInterval() are methods where as document is the object of window and it also has a screen 
                       object with properties discribing the physical display
-
+x
                -> example of window object properties are innerHeight, innerWidth and many more
 
      ## FUNCTIONS alert/confirm/prompt are also part of BOM:
